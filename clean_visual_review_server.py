@@ -6,15 +6,15 @@ import logging
 max_runs_in_suit = 20
 
 pswa_mailing_assets = requests.get(
-    'http://10.1.1.92:7000/api/projects/1/suites/1')
+    'http://<ip>:7000/api/projects/1/suites/1')
 pswa_app = requests.get(
-    'http://10.1.1.92:7000/api/projects/1/suites/2')
+    'http://<ip>:7000/api/projects/1/suites/2')
 fleetmanager_app = requests.get(
-    'http://10.1.1.92:7000/api/projects/2/suites/3')
+    'http://<ip>:7000/api/projects/2/suites/3')
 
 suits = [pswa_mailing_assets, pswa_app, fleetmanager_app]
 
-server_url = 'http://10.1.1.92:7000/api/runs/{}'
+server_url = 'http://<ip>:7000/api/runs/{}'
 
 logging.basicConfig(level=logging.INFO,
                     format='%(levelname)s - %(asctime)s - %(message)s',
